@@ -86,3 +86,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+web/bundles/framework/css/exception.css
