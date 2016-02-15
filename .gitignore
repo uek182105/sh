@@ -23,7 +23,7 @@
 /vendor/
 
 # Assets and user uploads
-
+/web/bundles/
 /web/uploads/
 
 # PHPUnit
@@ -86,3 +86,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+web/bundles/framework/css/structure.css
+web/bundles/framework/images/logo_symfony.png
+web/bundles/framework/css/body.css
+web/bundles/framework/images/blue_picto_more.gif
