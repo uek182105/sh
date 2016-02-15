@@ -6,36 +6,44 @@
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('bundles/framework/css/style.css') }}">
     </head>
     <body>
         <header>
             <div id="nav">
-                <nav class="navbar navbar-default">
-                  <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Sh</a>
-                      {% if app.user %}
-                      <button type="button" class="btn btn-default navbar-btn"><a href="/sh/web/app_dev.php/profile">Mój profil</a></li></li></button>
-                      <button type="button" class="btn btn-default navbar-btn"><a href="/sh/web/app_dev.php/logout">Wyloguj się</a></button>
-                      {% else %}
-                      <button type="button" class="btn btn-default navbar-btn"><a href="/sh/web/app_dev.php/register">Zarejestruj się</a></button>
-                      {% endif %}
+                <div class="leftNav">
+                666 666 666
+                </div>
+                <div class="rightNav">
+                <ul id="navList">
+                    {% if app.user %}
+                    <li><a href="/sh/web/app_dev.php/profile">Moje konto</a></li>
+                    {% else %}     
+                    <li><a href="/sh/web/app_dev.php/register">Zarejestruj się</a></li>
+                    <li><a href="/sh/web/app_dev.php/login">Zaloguj się</a></li>
+                    <li><a href="/sh/web/app_dev/php/terms">Regulamin</a></li>
+                    {% endif %}
+                </ul>
+                </div>
+                <hr>
+                <div id="logo">
+                    <div class="leftNav leftLogo">
+                        <img src="{{ asset('logo.png') }}"/>
                     </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                      
-                    </div><!-- /.navbar-collapse -->
-                  </div><!-- /.container-fluid -->
-                </nav>   
-
+                    <div class="rightNav rightCart">
+                        <span>Koszyk: 0 przedmiotów: 0zł</span>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+                <div id="menu">
+                    <ul id="menuList">
+                    <li><a href="/sh/web/app_dev.php/">Home</a></li>
+                    <li><a href="/sh/web/app_dev.php/about">O nas</a></li>
+                    <li><a href="/sh/web/app_dev.php/delivery">Dostawa</a></li>
+                    <li><a href="/sh/web/app_dev.php/blog">Blog</a></li>
+                    <li><a href="/sh/web/app_dev.php/contact">Kontakt</a></li>
+                    </ul>
+                </div>
             </div>
         </header>
         <content>
@@ -47,5 +55,6 @@
         {% block javascripts %}{% endblock %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="{{ asset('homepage.js') }}"</script>
     </body>
 </html>
