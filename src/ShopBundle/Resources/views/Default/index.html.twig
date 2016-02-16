@@ -4,3 +4,9 @@
 {% block slider %}
 <img style="border-radius:4px;" src="{{ asset('slider.png') }}"/>
 {% endblock %}
+{% block categories %}
+{% for categories in categories %}
+{% set var = categories.category %}
+<li><a href=/sh/web/app_dev.php/{{ var|lower }}">{{ categories.category }}</a></li>
+{% endfor %}
+{% endblock %}
