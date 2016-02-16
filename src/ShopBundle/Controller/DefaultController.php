@@ -5,6 +5,7 @@ namespace ShopBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use ShopBundle\Entity\Products;
+use ShopBundle\Entity\User;
 
 class DefaultController extends Controller
 {
@@ -15,5 +16,5 @@ class DefaultController extends Controller
         $categories = $query->getResult();
         return $this->render('ShopBundle:Default:index.html.twig', array('categories' => $categories));
     }
-   
+
 }
