@@ -54,11 +54,7 @@
                     KATEGORIE
                 </div>            
             <ul id="categoryList">
-                <li>Mobile phones</li>
-                <li>Desktop</li>
-                <li>Laptop</li>
-                <li>Accessories</li>
-                <li>Software</li>
+                {% block categories %}{% endblock %}
             </ul>   
             </div>
             <div id="slider">{% block slider %}{% endblock %}
@@ -66,7 +62,7 @@
             {% block content %}{% endblock %}     
         </section>
         <sidebar>
-            {% block sidebar%}{% endblock %}
+            {% block sidebar %}{% endblock %}
         </sidebar>
         <footer>
             <div id="footerColumn">
