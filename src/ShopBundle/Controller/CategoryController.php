@@ -3,12 +3,12 @@
 namespace ShopBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Response;  
 use ShopBundle\Entity\Products;
 use ShopBundle\Entity\User;
 
 class CategoryController extends Controller
-{
+{ 
    public function indexAction()
    {
    		$em = $this->getDoctrine()->getManager();

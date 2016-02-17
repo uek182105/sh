@@ -9,4 +9,19 @@
 {% set var = categories.category %}
 <li><a href="/sh/web/app_dev.php/category/{{ var|lower }}">{{ categories.category }}</a></li>
 {% endfor %}
+
+{% endblock %}
+
+{% block products %}
+<div class="container">
+<div class="row">
+{% for categories in categories %}
+<div class="col-md-3">
+<a href="/produkt/{$slug}">
+{{ categories.name }}
+
+<img src="{{categories.img}}" style="width:150px">
+</a></div>
+{% endfor %}
+</div></div>
 {% endblock %}
